@@ -6,6 +6,6 @@
              x:Class="AvaloniaApplicationReact.Views.CustomTextBox">
 	<StackPanel Orientation="Horizontal" Spacing="5">
 		<TextBlock Text="Name:" VerticalAlignment="Center"/>
-		<TextBox Width="150" Text="{Binding Name, Mode=TwoWay}"/>
+		<TextBox Width="30" Height="30" Text="{Binding Name, Mode=TwoWay}"/>
 	</StackPanel>
 </UserControl>

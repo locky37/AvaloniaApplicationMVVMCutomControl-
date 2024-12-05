@@ -6,6 +6,6 @@
 
     <Application.Styles>
        <FluentTheme />
-		<StyleInclude Source="avares://AvaloniaApplicationReact/Assets/Styles.axaml" />
+		<!--<StyleInclude Source="avares://AvaloniaApplicationReact/Assets/Styles.axaml" />-->
     </Application.Styles>
 </Application>

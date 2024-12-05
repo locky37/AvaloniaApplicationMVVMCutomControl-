@@ -4,35 +4,75 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaApplicationReact.Views.TabsView"
-			 xmlns:local="clr-namespace:AvaloniaApplicationReact.Views">
- <TabControl>
-    <!-- Tab 1 -->
-    <TabItem Header="Tab 1">
-      <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <ListBox ItemsSource="{Binding Items}">
-          <ListBox.ItemTemplate>
-            <DataTemplate>
-              <local:CustomTextBox DataContext="{Binding}" />
-            </DataTemplate>
-          </ListBox.ItemTemplate>
-        </ListBox>
-      </ScrollViewer>
-    </TabItem>
+             xmlns:local="clr-namespace:AvaloniaApplicationReact.Views">
 
-    <!-- Tab 2 -->
-    <TabItem Header="Tab 2">
-      <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <ListBox ItemsSource="{Binding Items}">
-          <ListBox.ItemTemplate>
-            <DataTemplate>
-              <StackPanel Orientation="Horizontal" Spacing="5">
-                <TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
-                <TextBox Text="{Binding Name, Mode=TwoWay}" Width="200" />
-              </StackPanel>
-            </DataTemplate>
-          </ListBox.ItemTemplate>
-        </ListBox>
-      </ScrollViewer>
-    </TabItem>
-  </TabControl>
+	<!--<TabControl>
+		--><!-- Tab 1 --><!--
+		<TabItem Header="Tab 1">
+			<TabItem.ContentTemplate>
+				<DataTemplate>
+					<ScrollViewer VerticalScrollBarVisibility="Auto">
+						<ListBox ItemsSource="{Binding Items}">
+							<ListBox.ItemTemplate>
+								<DataTemplate>
+									--><!-- Assuming CustomTextBox is a user control --><!--
+									<local:CustomTextBox DataContext="{Binding}" />
+								</DataTemplate>
+							</ListBox.ItemTemplate>
+						</ListBox>
+					</ScrollViewer>
+				</DataTemplate>
+			</TabItem.ContentTemplate>
+		</TabItem>
+
+		--><!-- Tab 2 --><!--
+		<TabItem Header="Tab 2">
+			<TabItem.ContentTemplate>
+				<DataTemplate>
+					<ScrollViewer VerticalScrollBarVisibility="Auto">
+						<ListBox ItemsSource="{Binding Items}">
+							<ListBox.ItemTemplate>
+								<DataTemplate>
+									<StackPanel Orientation="Horizontal" Spacing="5">
+										<TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+										<TextBox Text="{Binding Name, Mode=TwoWay}" Width="200" />
+									</StackPanel>
+								</DataTemplate>
+							</ListBox.ItemTemplate>
+						</ListBox>
+					</ScrollViewer>
+				</DataTemplate>
+			</TabItem.ContentTemplate>
+		</TabItem>
+	</TabControl>-->
+
+	<TabControl Margin="5">
+		<TabItem Header="Tab 1">
+			<ListBox ItemsSource="{Binding Items}">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<StackPanel Orientation="Horizontal" Spacing="5">
+							<TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+							<TextBox Text="{Binding Name, Mode=TwoWay}" Width="200" />
+						</StackPanel>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</TabItem>
+		<TabItem Header="Tab 2">
+			<ListBox ItemsSource="{Binding Items}">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<StackPanel Orientation="Horizontal" Spacing="5">
+							<TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+							<TextBox Text="{Binding Name, Mode=TwoWay}" Width="200" />
+						</StackPanel>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</TabItem>
+		<TabItem Header="Tab 3">
+			<TextBlock Margin="5">This is tab 3 content</TextBlock>
+		</TabItem>
+	</TabControl>
 </UserControl>
