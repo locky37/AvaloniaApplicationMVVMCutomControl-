@@ -14,14 +14,6 @@
   </Design.DataContext>
 
 	<Grid>
-		<ScrollViewer VerticalScrollBarVisibility="Auto">
-			<ListBox ItemsSource="{Binding Items}">
-				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<local:CustomTextBox DataContext="{Binding}"/>
-					</DataTemplate>
-				</ListBox.ItemTemplate>
-			</ListBox>
-		</ScrollViewer>
+		<local:TabsView DataContext="{Binding}" />
 	</Grid>
 </UserControl>

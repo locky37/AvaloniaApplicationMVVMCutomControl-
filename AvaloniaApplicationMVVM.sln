@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaApplicationMVVM", "AvaloniaApplicationMVVM\AvaloniaApplicationMVVM.csproj", "{657F71C5-9C6E-4105-B360-68C54BE62D2A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaApplicationReact", "AvaloniaApplicationReact\AvaloniaApplicationReact.csproj", "{20E4B673-0298-46A4-ADCC-99AB897988A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaApplicationReact.Desktop", "AvaloniaApplicationReact.Desktop\AvaloniaApplicationReact.Desktop.csproj", "{7D5D2439-E7E1-4015-86C6-EC783F89FE94}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{657F71C5-9C6E-4105-B360-68C54BE62D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{657F71C5-9C6E-4105-B360-68C54BE62D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{657F71C5-9C6E-4105-B360-68C54BE62D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{657F71C5-9C6E-4105-B360-68C54BE62D2A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{20E4B673-0298-46A4-ADCC-99AB897988A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{20E4B673-0298-46A4-ADCC-99AB897988A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20E4B673-0298-46A4-ADCC-99AB897988A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
