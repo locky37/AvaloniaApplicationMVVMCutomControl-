@@ -48,6 +48,7 @@
 
 	<TabControl Margin="5">
 		<TabItem Header="Tab 1">
+			<ScrollViewer VerticalScrollBarVisibility="Auto">
 			<ListBox ItemsSource="{Binding Items}">
 				<ListBox.ItemTemplate>
 					<DataTemplate>
@@ -58,21 +59,35 @@
 					</DataTemplate>
 				</ListBox.ItemTemplate>
 			</ListBox>
+			</ScrollViewer>
 		</TabItem>
 		<TabItem Header="Tab 2">
-			<ListBox ItemsSource="{Binding Items}">
-				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<StackPanel Orientation="Horizontal" Spacing="5">
-							<TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
-							<TextBox Text="{Binding Name, Mode=TwoWay}" Width="200" />
-						</StackPanel>
-					</DataTemplate>
-				</ListBox.ItemTemplate>
-			</ListBox>
+			<ScrollViewer VerticalScrollBarVisibility="Auto">
+				<ListBox ItemsSource="{Binding Items}">
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<StackPanel Orientation="Horizontal" Spacing="5">
+								<TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+								<TextBox Text="{Binding Name, Mode=TwoWay}" Width="200" />
+							</StackPanel>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+			</ScrollViewer>
 		</TabItem>
 		<TabItem Header="Tab 3">
-			<TextBlock Margin="5">This is tab 3 content</TextBlock>
+			<ScrollViewer VerticalScrollBarVisibility="Auto">
+				<ListBox ItemsSource="{Binding Items}">
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<StackPanel Orientation="Horizontal" Spacing="5">
+								<TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+								<TextBox Text="{Binding Name, Mode=TwoWay}" Width="200" />
+							</StackPanel>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+			</ScrollViewer>
 		</TabItem>
 	</TabControl>
 </UserControl>
