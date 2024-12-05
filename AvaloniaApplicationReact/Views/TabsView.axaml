@@ -48,18 +48,20 @@
 
 	<TabControl Margin="5">
 		<TabItem Header="Tab 1">
-			<ScrollViewer VerticalScrollBarVisibility="Auto">
-			<ListBox ItemsSource="{Binding Items}">
-				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<StackPanel Orientation="Horizontal" Spacing="5">
-							<TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
-							<TextBox Text="{Binding Name, Mode=TwoWay}" Width="200" />
-						</StackPanel>
-					</DataTemplate>
-				</ListBox.ItemTemplate>
-			</ListBox>
-			</ScrollViewer>
+			<TabItem.ContentTemplate>
+				<DataTemplate>
+					<ScrollViewer VerticalScrollBarVisibility="Auto">
+						<ListBox ItemsSource="{Binding Items}">
+							<ListBox.ItemTemplate>
+								<DataTemplate>
+									<!-- Здесь каждый элемент будет иметь свой собственный экземпляр CustomTextBox -->
+									<local:CustomTextBox DataContext="{Binding}" />
+								</DataTemplate>
+							</ListBox.ItemTemplate>
+						</ListBox>
+					</ScrollViewer>
+				</DataTemplate>
+			</TabItem.ContentTemplate>
 		</TabItem>
 		<TabItem Header="Tab 2">
 			<ScrollViewer VerticalScrollBarVisibility="Auto">
@@ -67,8 +69,7 @@
 					<ListBox.ItemTemplate>
 						<DataTemplate>
 							<StackPanel Orientation="Horizontal" Spacing="5">
-								<TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
-								<TextBox Text="{Binding Name, Mode=TwoWay}" Width="200" />
+								<local:CustomTextBox DataContext="{Binding}" />
 							</StackPanel>
 						</DataTemplate>
 					</ListBox.ItemTemplate>
@@ -83,6 +84,19 @@
 							<StackPanel Orientation="Horizontal" Spacing="5">
 								<TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
 								<TextBox Text="{Binding Name, Mode=TwoWay}" Width="200" />
+							</StackPanel>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+			</ScrollViewer>
+		</TabItem>
+		<TabItem Header="Tab 4">
+			<ScrollViewer VerticalScrollBarVisibility="Auto">
+				<ListBox ItemsSource="{Binding Items}">
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<StackPanel Orientation="Horizontal" Spacing="5">
+								<local:CustomTextBox DataContext="{Binding}" />
 							</StackPanel>
 						</DataTemplate>
 					</ListBox.ItemTemplate>

@@ -15,5 +15,63 @@
 
 	<Grid>
 		<local:TabsView DataContext="{Binding}" />
+		<TabControl Margin="340,5,0,0">
+			<TabItem Header="Tab 11">
+				<TabItem.ContentTemplate>
+					<DataTemplate>
+						<ScrollViewer VerticalScrollBarVisibility="Auto">
+							<ListBox ItemsSource="{Binding Items}">
+								<ListBox.ItemTemplate>
+									<DataTemplate>
+										<!-- Здесь каждый элемент будет иметь свой собственный экземпляр CustomTextBox -->
+										<local:CustomTextBox DataContext="{Binding}" />
+									</DataTemplate>
+								</ListBox.ItemTemplate>
+							</ListBox>
+						</ScrollViewer>
+					</DataTemplate>
+				</TabItem.ContentTemplate>
+			</TabItem>
+			<TabItem Header="Tab 22">
+				<ScrollViewer VerticalScrollBarVisibility="Auto">
+					<ListBox ItemsSource="{Binding Items}">
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<StackPanel Orientation="Horizontal" Spacing="5">
+									<local:CustomTextBox DataContext="{Binding}" />
+								</StackPanel>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+				</ScrollViewer>
+			</TabItem>
+			<TabItem Header="Tab 33">
+				<ScrollViewer VerticalScrollBarVisibility="Auto">
+					<ListBox ItemsSource="{Binding Items}">
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<StackPanel Orientation="Horizontal" Spacing="5">
+									<TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+									<TextBox Text="{Binding Name, Mode=TwoWay}" Width="200" />
+								</StackPanel>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+				</ScrollViewer>
+			</TabItem>
+			<TabItem Header="Tab 44">
+				<ScrollViewer VerticalScrollBarVisibility="Auto">
+					<ListBox ItemsSource="{Binding Items}">
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<StackPanel Orientation="Horizontal" Spacing="5">
+									<local:CustomTextBox DataContext="{Binding}" />
+								</StackPanel>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+				</ScrollViewer>
+			</TabItem>
+		</TabControl>
 	</Grid>
 </UserControl>
